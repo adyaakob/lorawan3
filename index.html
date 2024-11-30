@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Proposal - LoRaWAN Worker Tracking System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">TEQ Armada</a>
+            <div class="nav-menu">
+                <a href="#overview" class="active">Overview</a>
+                <a href="#solution">Solution</a>
+                <a href="#architecture">Architecture</a>
+                <a href="#hardware">Hardware</a>
+                <a href="#software">Software</a>
+                <a href="#deployment">Deployment</a>
+                <a href="#integration">Integration</a>
+                <a href="#environmental">Environmental</a>
+                <a href="#testing">Testing</a>
+                <a href="#training">Training</a>
+                <a href="#timeline">Timeline</a>
+                <a href="#costs">Costs</a>
+                <a href="#risks">Risks</a>
+                <a href="#conclusion">Conclusion</a>
+                <a href="#contact">Contact</a>
+                <a href="#appendices">Appendices</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Real-Time Worker Tracking System</h1>
+            <h2>in Oil Palm Plantations Using LoRaWAN Technology</h2>
+            <p class="hero-subtitle">Enhance worker safety and optimize resource allocation across nine oil palm estates</p>
+            <div class="hero-cta">
+                <a href="#contact" class="cta-button">Get Started</a>
+                <a href="#overview" class="cta-button secondary">Learn More</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="overview" class="section">
+            <div class="container">
+                <h2 class="section-title">Executive Summary</h2>
+                <div class="content-wrapper">
+                    <div class="highlight-box">
+                        <h3>Key Features</h3>
+                        <ul>
+                            <li>Real-time tracking of 4,500 workers across nine estates</li>
+                            <li>LoRaWAN technology for reliable coverage</li>
+                            <li>Solar-powered infrastructure</li>
+                            <li>Integration with existing HQ systems</li>
+                        </ul>
+                    </div>
+                    <p>This technical proposal outlines a comprehensive solution for real-time tracking of workers across nine oil palm estates, each housing approximately 500 workers. The system leverages LoRaWAN technology to overcome the challenges of limited GPS and cellular coverage in dense plantation environments.</p>
+                    
+                    <div class="more-container">
+                        <button class="more-btn">MORE</button>
+                        <div class="detailed-content">
+                            <h3>Project Background</h3>
+                            <p>In modern plantation operations, ensuring worker safety and optimizing operational efficiency are paramount concerns. Traditional methods of worker tracking and management often fall short in providing real-time information and quick response capabilities in emergency situations.</p>
+
+                            <h3>System Purpose</h3>
+                            <ul>
+                                <li>Enhance worker safety through real-time location tracking</li>
+                                <li>Improve emergency response times and effectiveness</li>
+                                <li>Optimize workforce management and operational efficiency</li>
+                                <li>Provide data-driven insights for better decision making</li>
+                            </ul>
+
+                            <h3>Implementation Scope</h3>
+                            <ul>
+                                <li>Coverage area: Nine oil palm estates</li>
+                                <li>Total workers: 4,500 (approximately 500 per estate)</li>
+                                <li>Infrastructure: LoRaWAN gateways with solar power</li>
+                                <li>Integration points: HQ management systems</li>
+                            </ul>
+
+                            <h3>Technology Selection</h3>
+                            <p>LoRaWAN technology was chosen for its:</p>
+                            <ul>
+                                <li>Long-range coverage (up to 10km in rural areas)</li>
+                                <li>Low power consumption for extended battery life</li>
+                                <li>Ability to penetrate dense foliage</li>
+                                <li>Cost-effective deployment and maintenance</li>
+                            </ul>
+
+                            <h3>Expected Benefits</h3>
+                            <ul>
+                                <li>Enhanced worker safety through real-time monitoring</li>
+                                <li>Improved emergency response capabilities</li>
+                                <li>Optimized workforce management</li>
+                                <li>Reduced operational costs</li>
+                                <li>Better compliance with safety regulations</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="solution" class="section">
+            <div class="container">
+                <h2 class="section-title">Proposed Solution</h2>
+                <div class="content-wrapper">
+                    <div class="solution-grid">
+                        <div class="solution-item">
+                            <h3>Background</h3>
+                            <p>Oil palm plantations face unique challenges in worker management and safety due to their vast, densely vegetated areas. Traditional GPS and cellular-based tracking systems often struggle with signal penetration under the palm canopy.</p>
+                        </div>
+                        <div class="solution-item">
+                            <h3>Objectives</h3>
+                            <ul>
+                                <li>Implement reliable real-time worker tracking</li>
+                                <li>Overcome GPS and cellular coverage limitations</li>
+                                <li>Ensure continuous operation with minimal maintenance</li>
+                                <li>Integrate with existing HQ systems</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="architecture" class="section">
+            <div class="container">
+                <h2 class="section-title">System Architecture</h2>
+                <div class="content-wrapper">
+                    <div class="architecture-layers">
+                        <div class="layer-item">
+                            <h3>End Device Layer</h3>
+                            <p>HKT GT-100 personal trackers worn by workers</p>
+                        </div>
+                        <div class="layer-item">
+                            <h3>Gateway Layer</h3>
+                            <p>Milesight SG50 solar-powered LoRaWAN gateways</p>
+                        </div>
+                        <div class="layer-item">
+                            <h3>Application Layer</h3>
+                            <p>Cloud-based data management platform and HQ dashboard</p>
+                        </div>
+                    </div>
+
+                    <div class="network-topology">
+                        <h3>Network Topology</h3>
+                        <div class="topology-diagram">
+                            <div class="topology-item">
+                                <h4>Star Topology 1</h4>
+                                <p>Multiple HKT GT-100 trackers connect to a single Milesight SG50 gateway</p>
+                            </div>
+                            <div class="topology-item">
+                                <h4>Star Topology 2</h4>
+                                <p>Multiple SG50 gateways connect to the central network server</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="data-flow">
+                        <h3>Data Flow</h3>
+                        <div class="flow-steps">
+                            <div class="flow-step">
+                                <span class="step-number">1</span>
+                                <h4>Data Collection</h4>
+                                <p>HKT GT-100 collects GPS data and sensor information</p>
+                            </div>
+                            <div class="flow-step">
+                                <span class="step-number">2</span>
+                                <h4>LoRaWAN Transmission</h4>
+                                <p>Data transmitted via LoRaWAN to Milesight SG50 Gateway</p>
+                            </div>
+                            <div class="flow-step">
+                                <span class="step-number">3</span>
+                                <h4>Backhaul Transmission</h4>
+                                <p>Gateway sends aggregated data via 4G LTE to Network Server</p>
+                            </div>
+                            <div class="flow-step">
+                                <span class="step-number">4</span>
+                                <h4>Processing & Storage</h4>
+                                <p>Data processed, analyzed, and stored in the cloud</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="hardware" class="section">
+            <div class="container">
+                <h2 class="section-title">Hardware Components</h2>
+                <div class="content-wrapper">
+                    <div class="hardware-grid">
+                        <div class="hardware-category">
+                            <h3>End Devices</h3>
+                            <div class="hardware-description">
+                                <p>Our solution utilizes the HKT GT-100 worker tracking device, a rugged and reliable LoRaWAN-enabled device specifically designed for industrial environments.</p>
+                                <ul>
+                                    <li>Long battery life (up to 6 months)</li>
+                                    <li>IP67 waterproof rating</li>
+                                    <li>Integrated emergency button</li>
+                                    <li>Fall detection capability</li>
+                                    <li>Compact and lightweight design</li>
+                                </ul>
+                            </div>
+                            <div class="image-gallery">
+                                <div class="gallery-item">
+                                    <img src="images/node01.jpg" alt="HKT GT-100 Worker Tracking Device - Front View">
+                                    <p class="image-caption">GT-100 Front View</p>
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="images/node02.jpg" alt="HKT GT-100 Worker Tracking Device - Side View">
+                                    <p class="image-caption">GT-100 Side View</p>
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="images/node03.jpg" alt="HKT GT-100 Worker Tracking Device - Back View">
+                                    <p class="image-caption">GT-100 Back View</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="hardware-category">
+                            <h3>Gateway Infrastructure</h3>
+                            <div class="hardware-description">
+                                <p>The Milesight SG500 8-channel gateway serves as the backbone of our LoRaWAN network, providing reliable connectivity across the plantation.</p>
+                                <div class="specs-grid">
+                                    <div class="specs-column">
+                                        <h4>Gateway Features</h4>
+                                        <ul>
+                                            <li>8-channel parallel processing</li>
+                                            <li>Up to 15km range in line of sight</li>
+                                            <li>4G/LTE backhaul connectivity</li>
+                                            <li>GPS time synchronization</li>
+                                            <li>IP65 weatherproof enclosure</li>
+                                        </ul>
+                                    </div>
+                                    <div class="specs-column">
+                                        <h4>Solar Power System</h4>
+                                        <ul>
+                                            <li>30W standard solar panel (upgradable to 45W)</li>
+                                            <li>25000mAh built-in rechargeable battery</li>
+                                            <li>0.8W typical power consumption</li>
+                                            <li>Up to 4 days operation without sunlight</li>
+                                        </ul>
+                                        <h5>Smart Power Management</h5>
+                                        <ul>
+                                            <li>Data package filtering to reduce unnecessary power usage</li>
+                                            <li>Smart Wi-Fi control for battery efficiency</li>
+                                            <li>Low-temperature battery heating for cold environments</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="image-gallery">
+                                <div class="gallery-item">
+                                    <img src="images/sg5001.jpg" alt="Milesight SG500 Gateway - Front View">
+                                    <p class="image-caption">SG500 Front View</p>
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="images/sg5002.jpg" alt="Milesight SG500 Gateway - Installation">
+                                    <p class="image-caption">SG500 Installation</p>
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="images/sg5003.jpg" alt="Milesight SG500 Gateway - Ports">
+                                    <p class="image-caption">SG500 Connectivity Ports</p>
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="images/sg5004.jpg" alt="Milesight SG500 Gateway - Antenna">
+                                    <p class="image-caption">SG500 with Antenna</p>
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="images/sg5005.jpg" alt="Milesight SG500 Gateway - Deployment">
+                                    <p class="image-caption">SG500 Field Deployment</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="software" class="section">
+            <div class="container">
+                <h2 class="section-title">Software Components</h2>
+                <div class="content-wrapper">
+                    <div class="software-grid">
+                        <div class="software-item">
+                            <div class="software-icon server-icon"></div>
+                            <h3>LoRaWAN Network Server</h3>
+                            <div class="features-list">
+                                <div class="feature">Device Management & Provisioning</div>
+                                <div class="feature">Authentication & Authorization</div>
+                                <div class="feature">Network Session Management</div>
+                                <div class="feature">Horizontal Scaling Support</div>
+                            </div>
+                        </div>
+                        <div class="software-item">
+                            <div class="software-icon api-icon"></div>
+                            <h3>API Integration</h3>
+                            <div class="features-list">
+                                <div class="feature">RESTful API Design</div>
+                                <div class="feature">Real-time Data Retrieval</div>
+                                <div class="feature">Historical Data Querying</div>
+                                <div class="feature">Secure Authentication</div>
+                            </div>
+                        </div>
+                        <div class="software-item">
+                            <div class="software-icon database-icon"></div>
+                            <h3>Data Management</h3>
+                            <div class="features-list">
+                                <div class="feature">Time-series Database</div>
+                                <div class="feature">Real-time Analytics</div>
+                                <div class="feature">Custom Reporting</div>
+                                <div class="feature">Alert System</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="deployment" class="section">
+            <div class="container">
+                <h2 class="section-title">Deployment Strategy</h2>
+                <div class="content-wrapper">
+                    <div class="deployment-grid">
+                        <div class="deployment-phase">
+                            <h3>Phase 1: Site Survey</h3>
+                            <ul>
+                                <li>RF coverage analysis</li>
+                                <li>Gateway placement optimization</li>
+                                <li>Infrastructure requirements assessment</li>
+                            </ul>
+                        </div>
+                        <div class="deployment-phase">
+                            <h3>Phase 2: Pilot Implementation</h3>
+                            <ul>
+                                <li>Single estate deployment</li>
+                                <li>System validation</li>
+                                <li>Performance optimization</li>
+                            </ul>
+                        </div>
+                        <div class="deployment-phase">
+                            <h3>Phase 3: Full Rollout</h3>
+                            <ul>
+                                <li>Systematic estate-by-estate deployment</li>
+                                <li>Network optimization</li>
+                                <li>User training and system handover</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="integration" class="section">
+            <div class="container">
+                <h2 class="section-title">Integration Plan</h2>
+                <div class="content-wrapper">
+                    <div class="integration-details">
+                        <div class="integration-item">
+                            <h3>Data Integration</h3>
+                            <ul>
+                                <li>REST API implementation</li>
+                                <li>Real-time data synchronization</li>
+                                <li>Legacy system compatibility</li>
+                            </ul>
+                        </div>
+                        <div class="integration-item">
+                            <h3>System Integration</h3>
+                            <ul>
+                                <li>HQ dashboard integration</li>
+                                <li>Mobile app synchronization</li>
+                                <li>Alert system implementation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="environmental" class="section">
+            <div class="container">
+                <h2 class="section-title">Environmental Considerations</h2>
+                <div class="content-wrapper">
+                    <div class="environmental-grid">
+                        <div class="environmental-item">
+                            <h3>Sustainability</h3>
+                            <ul>
+                                <li>Solar-powered infrastructure</li>
+                                <li>Low-power devices</li>
+                                <li>Minimal environmental impact</li>
+                            </ul>
+                        </div>
+                        <div class="environmental-item">
+                            <h3>Weather Resilience</h3>
+                            <ul>
+                                <li>IP67-rated equipment</li>
+                                <li>Lightning protection</li>
+                                <li>Flood-resistant installations</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testing" class="section">
+            <div class="container">
+                <h2 class="section-title">Testing and Quality Assurance</h2>
+                <div class="content-wrapper">
+                    <div class="testing-phases">
+                        <div class="testing-phase">
+                            <h3>Component Testing</h3>
+                            <ul>
+                                <li>Device reliability testing</li>
+                                <li>Gateway performance validation</li>
+                                <li>Network coverage testing</li>
+                            </ul>
+                        </div>
+                        <div class="testing-phase">
+                            <h3>System Testing</h3>
+                            <ul>
+                                <li>End-to-end system validation</li>
+                                <li>Performance benchmarking</li>
+                                <li>Security testing</li>
+                            </ul>
+                        </div>
+                        <div class="testing-phase">
+                            <h3>User Acceptance Testing</h3>
+                            <ul>
+                                <li>Field trials</li>
+                                <li>User feedback integration</li>
+                                <li>System optimization</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="training" class="section">
+            <div class="container">
+                <h2 class="section-title">Training and Support</h2>
+                <div class="content-wrapper">
+                    <div class="training-support-grid">
+                        <div class="training-item">
+                            <h3>User Training</h3>
+                            <ul>
+                                <li>Device handling training</li>
+                                <li>System operation workshops</li>
+                                <li>Safety procedures</li>
+                            </ul>
+                        </div>
+                        <div class="training-item">
+                            <h3>Technical Support</h3>
+                            <ul>
+                                <li>24/7 helpdesk support</li>
+                                <li>Remote troubleshooting</li>
+                                <li>Regular maintenance visits</li>
+                            </ul>
+                        </div>
+                        <div class="training-item">
+                            <h3>Documentation</h3>
+                            <ul>
+                                <li>User manuals</li>
+                                <li>Technical documentation</li>
+                                <li>Maintenance guides</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="timeline" class="section">
+            <div class="container">
+                <h2 class="section-title">Project Timeline</h2>
+                <div class="content-wrapper">
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <span class="timeline-date">Month 1</span>
+                                <h3>Planning and Design</h3>
+                                <ul>
+                                    <li>Initial Planning & Requirements</li>
+                                    <li>Site Surveys</li>
+                                    <li>System Design</li>
+                                    <li>Network Planning</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <span class="timeline-date">Month 2-4</span>
+                                <h3>Procurement</h3>
+                                <ul>
+                                    <li>Tender Preparation</li>
+                                    <li>Supplier Selection</li>
+                                    <li>Contract Finalization</li>
+                                    <li>Equipment Ordering</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <span class="timeline-date">Month 5-6</span>
+                                <h3>Deployment</h3>
+                                <ul>
+                                    <li>Initial Setup</li>
+                                    <li>Gateway Installation</li>
+                                    <li>Tracker Distribution</li>
+                                    <li>System Configuration</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <span class="timeline-date">Month 7-9</span>
+                                <h3>Testing & Optimization</h3>
+                                <ul>
+                                    <li>Coverage Testing</li>
+                                    <li>Performance Analysis</li>
+                                    <li>System Adjustments</li>
+                                    <li>Final Verification</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <span class="timeline-date">Month 10+</span>
+                                <h3>Training & Support</h3>
+                                <ul>
+                                    <li>Staff Training</li>
+                                    <li>System Launch</li>
+                                    <li>Ongoing Support</li>
+                                    <li>Performance Monitoring</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="costs" class="section">
+            <div class="container">
+                <h2 class="section-title">Cost Analysis</h2>
+                <div class="content-wrapper">
+                    <div class="costs-overview">
+                        <div class="cost-card capex">
+                            <h3>Capital Expenditure</h3>
+                            <div class="cost-total">RM 2,608,500</div>
+                            <div class="cost-breakdown">
+                                <div class="cost-item">
+                                    <span>Hardware</span>
+                                    <span>RM 2,233,500</span>
+                                </div>
+                                <div class="cost-item">
+                                    <span>Installation</span>
+                                    <span>RM 160,000</span>
+                                </div>
+                                <div class="cost-item">
+                                    <span>Software Setup</span>
+                                    <span>RM 215,000</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cost-card opex">
+                            <h3>Annual Operating Costs</h3>
+                            <div class="cost-total">RM 491,000</div>
+                            <div class="cost-breakdown">
+                                <div class="cost-item">
+                                    <span>Maintenance</span>
+                                    <span>RM 221,000</span>
+                                </div>
+                                <div class="cost-item">
+                                    <span>Support Services</span>
+                                    <span>RM 148,000</span>
+                                </div>
+                                <div class="cost-item">
+                                    <span>Connectivity</span>
+                                    <span>RM 122,000</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="benefits-section">
+                        <h3>Key Benefits</h3>
+                        <div class="benefits-grid">
+                            <div class="benefit-item">
+                                <h4>Operational Efficiency</h4>
+                                <p>20-30% reduction in time spent on manual worker tracking</p>
+                            </div>
+                            <div class="benefit-item">
+                                <h4>Safety Improvements</h4>
+                                <p>Up to 70% reduction in incident response time</p>
+                            </div>
+                            <div class="benefit-item">
+                                <h4>Long-term Value</h4>
+                                <p>5+ years system lifespan with minimal component replacement</p>
+                            </div>
+                            <div class="benefit-item">
+                                <h4>Scalability</h4>
+                                <p>Infrastructure capable of 50% capacity increase</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="more-container">
+                        <button class="more-btn">MORE</button>
+                        <div class="detailed-content">
+                            <h3>10.1 Capital Expenditure (CAPEX)</h3>
+                            <h4>Hardware Costs</h4>
+                            <h5>End Devices:</h5>
+                            <ul>
+                                <li>4,500 HKT GT-100 trackers @ RM350/unit = RM1,575,000</li>
+                                <li>150 Multi-Unit Charging Stations (HKT CS-20) @ RM1,200/unit = RM180,000</li>
+                                <li>450 Spare Battery Packs (HKT BAT-1000) @ RM150/unit = RM67,500</li>
+                                <li>4,500 Worker Safety Kits (HKT WAK-01) @ RM50/unit = RM225,000</li>
+                            </ul>
+                            <p>(Includes ruggedized casing and batteries)</p>
+
+                            <h5>Gateway Infrastructure:</h5>
+                            <ul>
+                                <li>9 Milesight SG50 Gateways (SG50-8CH) @ RM8,000/unit = RM72,000</li>
+                                <li>12 LoRa Gateway Antennas (SG-ANT-8) @ RM800/unit = RM9,600</li>
+                                <li>9 Lightning Protectors (SG-LP-100) @ RM300/unit = RM2,700</li>
+                                <li>9 Gateway Mounting Kits (SG-MK-01) @ RM500/unit = RM4,500</li>
+                                <li>9 12m Gateway Masts (GMT-12M) @ RM2,500/unit = RM22,500</li>
+                                <li>9 Guy Wire Kits (GWK-120) @ RM800/unit = RM7,200</li>
+                                <li>9 Foundation Kits (FDK-12M) @ RM1,500/unit = RM13,500</li>
+                            </ul>
+
+                            <h5>Solar Power System (per Gateway):</h5>
+                            <ul>
+                                <li>9 300W Solar Panels (SP-300W) @ RM1,200/unit = RM10,800</li>
+                                <li>9 25Ah Battery Banks (BB-25AH) @ RM2,500/unit = RM22,500</li>
+                                <li>9 MPPT Charge Controllers (MPPT-30A) @ RM800/unit = RM7,200</li>
+                                <li>9 Power Distribution Units (PDU-1500) @ RM1,000/unit = RM9,000</li>
+                                <li>9 Weatherproof Enclosures @ RM500/unit = RM4,500</li>
+                            </ul>
+                            <p>Total Hardware: RM2,233,500</p>
+
+                            <h5>Installation Costs:</h5>
+                            <ul>
+                                <li>Site Survey and Planning: RM30,000</li>
+                                <li>Gateway Installation @ RM3,000/site × 9 = RM27,000</li>
+                                <li>Mast and Foundation Installation @ RM5,000/site × 9 = RM45,000</li>
+                                <li>Solar System Installation @ RM2,000/site × 9 = RM18,000</li>
+                                <li>System Integration and Testing: RM40,000</li>
+                            </ul>
+                            <p>Total Installation: RM160,000</p>
+
+                            <h5>Software Setup:</h5>
+                            <ul>
+                                <li>Network Server Setup and Configuration: RM55,000</li>
+                                <li>Application Server Development: RM35,000</li>
+                                <li>Custom Dashboard Development: RM45,000</li>
+                                <li>Database and Analytics Setup: RM30,000</li>
+                                <li>Security Implementation: RM25,000</li>
+                                <li>Initial Training Program: RM25,000</li>
+                            </ul>
+                            <p>Total Software: RM215,000</p>
+                            <p>Total CAPEX: RM2,608,500</p>
+
+                            <h3>10.2 Operational Expenditure (OPEX) – Annual</h3>
+                            <h5>Maintenance Plans:</h5>
+                            <ul>
+                                <li>Gateway Hardware Maintenance @ RM1,000/gateway × 9 = RM9,000</li>
+                                <li>Solar System Maintenance @ RM500/site × 9 = RM4,500</li>
+                                <li>Battery Replacement Fund (annual): RM20,000</li>
+                                <li>Device Replacement Fund (10%): RM157,500</li>
+                                <li>Infrastructure Inspection and Repair: RM30,000</li>
+                            </ul>
+                            <p>Total Maintenance: RM221,000/year</p>
+
+                            <h5>Support Services:</h5>
+                            <ul>
+                                <li>24/7 Technical Support: RM40,000/year</li>
+                                <li>Emergency Response Service: RM30,000/year</li>
+                                <li>Software Updates and Licenses: RM35,000/year</li>
+                                <li>System Monitoring and Management: RM28,000/year</li>
+                                <li>Regular Training and Documentation: RM15,000/year</li>
+                            </ul>
+                            <p>Total Support: RM148,000/year</p>
+
+                            <h5>Connectivity Fees:</h5>
+                            <ul>
+                                <li>Network Server Hosting: RM28,000/year</li>
+                                <li>Cloud Storage and Processing: RM40,000/year</li>
+                                <li>Cellular Data for Gateways: RM54,000/year</li>
+                            </ul>
+                            <p>Total Connectivity: RM122,000/year</p>
+                            <p>Total Annual OPEX: RM491,000</p>
+
+                            <h3>10.3 Cost Benefits</h3>
+                            <h4>Operational Efficiency:</h4>
+                            <h5>Workforce Productivity:</h5>
+                            <ul>
+                                <li>20-30% reduction in time spent on manual worker tracking</li>
+                                <li>Improved resource allocation through real-time worker distribution data</li>
+                                <li>Enhanced harvest scheduling and field operation coordination</li>
+                                <li>Reduced administrative overhead in attendance management</li>
+                            </ul>
+
+                            <h4>Safety and Risk Management:</h4>
+                            <ul>
+                                <li>Potential reduction in workplace incident response time by up to 70%</li>
+                                <li>Decreased insurance premiums through improved safety measures</li>
+                                <li>Minimized liability risks through documented safety protocols</li>
+                                <li>Enhanced compliance with workplace safety regulations</li>
+                            </ul>
+
+                            <h4>Long-term Value:</h4>
+                            <h5>Maintenance and Longevity:</h5>
+                            <ul>
+                                <li>5+ years system lifespan with minimal component replacement</li>
+                                <li>Solar-powered operation reducing ongoing energy costs</li>
+                                <li>Modular design allowing cost-effective upgrades</li>
+                                <li>Reduced maintenance costs through remote diagnostics</li>
+                            </ul>
+
+                            <h5>Scalability Benefits:</h5>
+                            <ul>
+                                <li>Infrastructure capable of supporting 50% increase in worker capacity</li>
+                                <li>Easy integration with future plantation management systems</li>
+                                <li>Expandable coverage area without major infrastructure changes</li>
+                                <li>Flexible API allowing future functionality additions</li>
+                            </ul>
+
+                            <h4>Key Value Propositions:</h4>
+                            <ul>
+                                <li>Enterprise-scale coverage of 9 estates with 9 gateway locations</li>
+                                <li>Support for up to 4,500 worker tracking devices</li>
+                                <li>10-month phased implementation plan</li>
+                                <li>24/7 monitoring and technical support</li>
+                                <li>5-year equipment lifecycle</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="risks" class="section">
+            <div class="container">
+                <h2 class="section-title">Risk Assessment and Mitigation Strategies</h2>
+                <div class="content-wrapper">
+                    <div class="risks-grid">
+                        <div class="risk-item">
+                            <h3>Hardware Failures</h3>
+                            <div class="risk-content">
+                                <p class="risk-description">Risk of tracker device or gateway hardware malfunctions in harsh plantation environments.</p>
+                                <div class="mitigation">
+                                    <h4>Mitigation Strategies:</h4>
+                                    <ul>
+                                        <li>IP67-rated waterproof and dustproof enclosures</li>
+                                        <li>Regular maintenance schedules</li>
+                                        <li>Redundant gateway deployment</li>
+                                        <li>Backup power systems</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="risk-item">
+                            <h3>Network Coverage</h3>
+                            <div class="risk-content">
+                                <p class="risk-description">Potential signal interference or coverage gaps in dense plantation areas.</p>
+                                <div class="mitigation">
+                                    <h4>Mitigation Strategies:</h4>
+                                    <ul>
+                                        <li>Comprehensive site survey before deployment</li>
+                                        <li>Strategic gateway placement</li>
+                                        <li>Signal strength monitoring</li>
+                                        <li>Coverage optimization through network planning</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="risk-item">
+                            <h3>Battery Life</h3>
+                            <div class="risk-content">
+                                <p class="risk-description">Risk of device power failure during critical operations.</p>
+                                <div class="mitigation">
+                                    <h4>Mitigation Strategies:</h4>
+                                    <ul>
+                                        <li>Solar-powered charging systems</li>
+                                        <li>Low-power optimization</li>
+                                        <li>Battery level monitoring</li>
+                                        <li>Preventive battery replacement schedule</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="risk-item">
+                            <h3>Data Security</h3>
+                            <div class="risk-content">
+                                <p class="risk-description">Potential security breaches and unauthorized data access.</p>
+                                <div class="mitigation">
+                                    <h4>Mitigation Strategies:</h4>
+                                    <ul>
+                                        <li>End-to-end encryption</li>
+                                        <li>Regular security audits</li>
+                                        <li>Access control mechanisms</li>
+                                        <li>Secure data storage practices</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="risk-item">
+                            <h3>System Scalability</h3>
+                            <div class="risk-content">
+                                <p class="risk-description">Challenges in scaling the system for growing operations.</p>
+                                <div class="mitigation">
+                                    <h4>Mitigation Strategies:</h4>
+                                    <ul>
+                                        <li>Modular system architecture</li>
+                                        <li>Scalable cloud infrastructure</li>
+                                        <li>Regular capacity planning</li>
+                                        <li>Performance monitoring and optimization</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="risk-item">
+                            <h3>User Adoption</h3>
+                            <div class="risk-content">
+                                <p class="risk-description">Resistance to new technology adoption by workers.</p>
+                                <div class="mitigation">
+                                    <h4>Mitigation Strategies:</h4>
+                                    <ul>
+                                        <li>Comprehensive training programs</li>
+                                        <li>User-friendly interface design</li>
+                                        <li>Clear documentation and support</li>
+                                        <li>Regular feedback collection and implementation</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="conclusion" class="section">
+            <div class="container">
+                <h2 class="section-title">Conclusion and Recommendations</h2>
+                <div class="content-wrapper">
+                    <div class="conclusion-content">
+                        <div class="summary-box">
+                            <h3>Project Summary</h3>
+                            <p>The LoRaWAN Worker Tracking System represents a comprehensive solution for modern plantation management, combining robust hardware infrastructure with sophisticated software capabilities. This system addresses critical challenges in worker safety, operational efficiency, and resource management while providing a scalable foundation for future expansion.</p>
+                        </div>
+
+                        <div class="key-benefits">
+                            <h3>Key Benefits</h3>
+                            <ul>
+                                <li>Enhanced worker safety through real-time location tracking and emergency response capabilities</li>
+                                <li>Improved operational efficiency with data-driven insights and automated monitoring</li>
+                                <li>Cost-effective implementation utilizing LoRaWAN technology's long-range capabilities</li>
+                                <li>Scalable architecture supporting future expansion and additional IoT integrations</li>
+                                <li>Comprehensive data analytics enabling informed decision-making</li>
+                            </ul>
+                        </div>
+
+                        <div class="recommendations">
+                            <h3>Recommendations</h3>
+                            <div class="recommendation-grid">
+                                <div class="recommendation-item">
+                                    <h4>Phased Implementation</h4>
+                                    <p>We recommend a phased deployment approach:</p>
+                                    <ol>
+                                        <li>Initial pilot program in a selected plantation area</li>
+                                        <li>System evaluation and optimization based on pilot feedback</li>
+                                        <li>Gradual expansion to additional areas</li>
+                                        <li>Full-scale deployment across all operations</li>
+                                    </ol>
+                                </div>
+
+                                <div class="recommendation-item">
+                                    <h4>Training and Support</h4>
+                                    <p>Implement comprehensive training programs:</p>
+                                    <ul>
+                                        <li>Regular training sessions for workers and supervisors</li>
+                                        <li>Documentation in multiple languages</li>
+                                        <li>Dedicated support team during implementation</li>
+                                        <li>Regular feedback collection and system optimization</li>
+                                    </ul>
+                                </div>
+
+                                <div class="recommendation-item">
+                                    <h4>Future Enhancements</h4>
+                                    <p>Consider these potential future improvements:</p>
+                                    <ul>
+                                        <li>Integration with weather monitoring systems</li>
+                                        <li>Advanced analytics and predictive modeling</li>
+                                        <li>Mobile app development for field supervisors</li>
+                                        <li>Environmental monitoring capabilities</li>
+                                    </ul>
+                                </div>
+
+                                <div class="recommendation-item">
+                                    <h4>Maintenance Strategy</h4>
+                                    <p>Establish a proactive maintenance plan:</p>
+                                    <ul>
+                                        <li>Regular hardware inspections and updates</li>
+                                        <li>Scheduled software maintenance windows</li>
+                                        <li>Backup and recovery procedures</li>
+                                        <li>Performance monitoring and optimization</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="next-steps">
+                            <h3>Next Steps</h3>
+                            <div class="steps-timeline">
+                                <div class="step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h4>Project Initiation</h4>
+                                        <p>Schedule detailed requirements gathering and site survey</p>
+                                    </div>
+                                </div>
+                                <div class="step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h4>Pilot Planning</h4>
+                                        <p>Define pilot scope and success criteria</p>
+                                    </div>
+                                </div>
+                                <div class="step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h4>Implementation</h4>
+                                        <p>Begin phased deployment and training</p>
+                                    </div>
+                                </div>
+                                <div class="step">
+                                    <div class="step-number">4</div>
+                                    <div class="step-content">
+                                        <h4>Evaluation</h4>
+                                        <p>Assess system performance and gather feedback</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="appendices" class="section">
+            <div class="container">
+                <h2 class="section-title">Appendices</h2>
+                <div class="content-wrapper">
+                    <div class="appendices-content">
+                        <h2>A. Product Breakdown Structure (PBS)</h2>
+                        <table>
+                            <tr><th>Level 1</th><th>Level 2</th><th>Level 3</th><th>Quantity</th></tr>
+                            <tr><td>1. End Nodes</td><td>1.1 HKT GT-100 GPS LoRa Trackers</td><td></td><td>4,500</td></tr>
+                            <tr><td></td><td>1.2 Multi-Unit Charging Stations (HKT CS-20)</td><td></td><td>150</td></tr>
+                            <tr><td></td><td>1.3 Spare Battery Packs (HKT BAT-1000)</td><td></td><td>450</td></tr>
+                            <tr><td></td><td>1.4 Worker Safety Kits (HKT WAK-01)</td><td></td><td>4,500</td></tr>
+                            <tr><td>2. Gateway Infrastructure</td><td>2.1 Milesight SG50 Gateways (SG50-8CH)</td><td></td><td>9</td></tr>
+                            <tr><td></td><td>2.2 LoRa Gateway Antennas (SG-ANT-8)</td><td></td><td>12</td></tr>
+                            <tr><td></td><td>2.3 Lightning Protectors (SG-LP-100)</td><td></td><td>9</td></tr>
+                            <tr><td></td><td>2.4 Gateway Mounting Kits (SG-MK-01)</td><td></td><td>9</td></tr>
+                            <tr><td></td><td>2.5 12m Gateway Masts (GMT-12M)</td><td></td><td>9</td></tr>
+                            <tr><td></td><td>2.6 Guy Wire Kits (GWK-120)</td><td></td><td>9</td></tr>
+                            <tr><td></td><td>2.7 Foundation Kits (FDK-12M)</td><td></td><td>9</td></tr>
+                            <tr><td>3. Solar Power System</td><td>3.1 300W Solar Panels (SP-300W)</td><td></td><td>9</td></tr>
+                            <tr><td></td><td>3.2 25Ah Battery Banks (BB-25AH)</td><td></td><td>9</td></tr>
+                            <tr><td></td><td>3.3 MPPT Charge Controllers (MPPT-30A)</td><td></td><td>9</td></tr>
+                            <tr><td></td><td>3.4 Power Distribution Units (PDU-1500)</td><td></td><td>9</td></tr>
+                            <tr><td></td><td>3.5 Weatherproof Enclosures</td><td></td><td>9</td></tr>
+                            <tr><td>4. Software Components</td><td>4.1 LoRaWAN Network Server</td><td></td><td>1</td></tr>
+                            <tr><td></td><td>4.2 Application Server</td><td></td><td>1</td></tr>
+                            <tr><td></td><td>4.3 Custom Dashboard</td><td></td><td>1</td></tr>
+                            <tr><td></td><td>4.4 Database and Analytics Platform</td><td></td><td>1</td></tr>
+                            <tr><td></td><td>4.5 Security Implementation</td><td></td><td>1</td></tr>
+                            <tr><td>5. Installation and Integration Services</td><td>5.1 Site Survey and Planning</td><td></td><td>1</td></tr>
+                            <tr><td></td><td>5.2 Gateway Installation</td><td></td><td>9</td></tr>
+                            <tr><td></td><td>5.3 Mast and Foundation Installation</td><td></td><td>9</td></tr>
+                            <tr><td></td><td>5.4 Solar System Installation</td><td></td><td>9</td></tr>
+                            <tr><td></td><td>5.5 System Integration and Testing</td><td></td><td>1</td></tr>
+                            <tr><td>6. Training and Documentation</td><td>6.1 User Manuals</td><td></td><td>1 set</td></tr>
+                            <tr><td></td><td>6.2 System Architecture Diagrams</td><td></td><td>1 set</td></tr>
+                            <tr><td></td><td>6.3 Maintenance Guides</td><td></td><td>1 set</td></tr>
+                            <tr><td></td><td>6.4 Training Program Materials</td><td></td><td>1 set</td></tr>
+                        </table>
+
+                        <h2>B. Technical Specifications</h2>
+                        <table>
+                            <tr><th>Component</th><th>Specification</th><th>Value</th></tr>
+                            <tr><td rowspan="7">HKT GT-100 GPS LoRa Tracker</td><td>Dimensions</td><td>87 x 43 x 15 mm</td></tr>
+                            <tr><td>Weight</td><td>80g</td></tr>
+                            <tr><td>Battery</td><td>1000mAh Li-ion, rechargeable</td></tr>
+                            <tr><td>GPS</td><td>Multi-GNSS receiver (GPS, GLONASS, Galileo, BeiDou)</td></tr>
+                            <tr><td>LoRaWAN</td><td>Supports multiple frequency bands (AS923 for Malaysia)</td></tr>
+                            <tr><td>Operating Temperature</td><td>-20°C to 65°C</td></tr>
+                            <tr><td>Water Resistance</td><td>IP67 rated</td></tr>
+                            <tr><td rowspan="8">Milesight SG50 LoRaWAN Gateway</td><td>Dimensions</td><td>250 × 157.5 × 46 mm</td></tr>
+                            <tr><td>Weight</td><td>1.755 kg (with batteries)</td></tr>
+                            <tr><td>Solar Panel</td><td>30W standard (upgradable to 45W)</td></tr>
+                            <tr><td>Battery</td><td>Built-in 25000mAh rechargeable</td></tr>
+                            <tr><td>LoRaWAN</td><td>8-channel</td></tr>
+                            <tr><td>Cellular</td><td>4G LTE (CAT 1)/GSM</td></tr>
+                            <tr><td>Operating Temperature</td><td>-30°C to +70°C</td></tr>
+                            <tr><td>Water Resistance</td><td>IP67 rated</td></tr>
+                            <tr><td rowspan="4">LoRaWAN Network Specifications</td><td>Frequency Band</td><td>AS923-1 (for Malaysia)</td></tr>
+                            <tr><td>Channel Plan</td><td>8 channels, centered on 923.2 MHz</td></tr>
+                            <tr><td>Maximum Transmit Power</td><td>27 dBm</td></tr>
+                            <tr><td>Receive Sensitivity</td><td>Up to -140 dBm</td></tr>
+                            <tr><td rowspan="3">Solar Power System</td><td>Solar Panel Output</td><td>300W</td></tr>
+                            <tr><td>Battery Bank Capacity</td><td>25Ah</td></tr>
+                            <tr><td>Charge Controller</td><td>MPPT, 30A</td></tr>
+                            <tr><td rowspan="4">Software Specifications</td><td>Network Server</td><td>Supports LoRaWAN 1.0.3 protocol</td></tr>
+                            <tr><td>Application Server</td><td>RESTful API, MQTT support</td></tr>
+                            <tr><td>Database</td><td>Time-series database for efficient data storage</td></tr>
+                            <tr><td>Security</td><td>End-to-end encryption, OAuth 2.0 authentication</td></tr>
+                        </table>
+
+                        <h2>C. Glossary of Terms</h2>
+                        <table>
+                            <tr><th>Term</th><th>Definition</th></tr>
+                            <tr><td>ADR</td><td>Adaptive Data Rate</td></tr>
+                            <tr><td>API</td><td>Application Programming Interface</td></tr>
+                            <tr><td>CAPEX</td><td>Capital Expenditure</td></tr>
+                            <tr><td>GPS</td><td>Global Positioning System</td></tr>
+                            <tr><td>GNSS</td><td>Global Navigation Satellite System</td></tr>
+                            <tr><td>IoT</td><td>Internet of Things</td></tr>
+                            <tr><td>IP67</td><td>Ingress Protection rating (dust-tight and protected against water immersion)</td></tr>
+                            <tr><td>LoRa</td><td>Long Range (radio modulation technique)</td></tr>
+                            <tr><td>LoRaWAN</td><td>Long Range Wide Area Network</td></tr>
+                            <tr><td>LTE</td><td>Long-Term Evolution (4G mobile network technology)</td></tr>
+                            <tr><td>MPPT</td><td>Maximum Power Point Tracking</td></tr>
+                            <tr><td>MQTT</td><td>Message Queuing Telemetry Transport</td></tr>
+                            <tr><td>OPEX</td><td>Operational Expenditure</td></tr>
+                            <tr><td>OTAA</td><td>Over-the-Air Activation</td></tr>
+                            <tr><td>PBS</td><td>Product Breakdown Structure</td></tr>
+                            <tr><td>REST</td><td>Representational State Transfer</td></tr>
+                            <tr><td>RSSI</td><td>Received Signal Strength Indicator</td></tr>
+                            <tr><td>SF</td><td>Spreading Factor</td></tr>
+                            <tr><td>VSAT</td><td>Very Small Aperture Terminal (satellite communication)</td></tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section-title">Get Started</h2>
+                <p class="section-description">
+                    Ready to enhance your plantation's worker safety and efficiency? Let's discuss 
+                    how our LoRaWAN tracking solution can benefit your operations.
+                </p>
+
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <h3>Visit Us</h3>
+                            <p>TEQ Armada Sdn Bhd</p>
+                            <p>Kuala Lumpur, Malaysia</p>
+                        </div>
+
+                        <div class="contact-item">
+                            <h3>Call Us</h3>
+                            <p>+60 12-345 6789</p>
+                            <p>Monday - Friday, 9am - 6pm</p>
+                        </div>
+
+                        <div class="contact-item">
+                            <h3>Email Us</h3>
+                            <p><a href="mailto:info@teqarmada.com">info@teqarmada.com</a></p>
+                            <p><a href="mailto:support@teqarmada.com">support@teqarmada.com</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-form">
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Your Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="company">Company Name</label>
+                                <input type="text" id="company" name="company" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-info">
+                        <div class="footer-logo">
+                            <h2>TEQ Armada</h2>
+                            <p>Innovative IoT Solutions for Agriculture</p>
+                        </div>
+                        <div class="footer-contact">
+                            <p>📞 +60 12-345 6789</p>
+                            <p>✉️ info@teqarmada.com</p>
+                        </div>
+                    </div>
+                    <div class="footer-links">
+                        <div class="link-group">
+                            <h3>Solutions</h3>
+                            <a href="#overview">Overview</a>
+                            <a href="#solution">Solution Details</a>
+                            <a href="#hardware">Hardware</a>
+                            <a href="#software">Software</a>
+                        </div>
+                        <div class="link-group">
+                            <h3>Company</h3>
+                            <a href="#about">About Us</a>
+                            <a href="#contact">Contact</a>
+                            <a href="#privacy">Privacy Policy</a>
+                            <a href="#terms">Terms of Service</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 TEQ Armada Sdn Bhd. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <div class="scroll-to-top" id="scrollTop">
+            <span>↑</span>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
